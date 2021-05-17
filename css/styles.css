@@ -1,0 +1,131 @@
+/* 1.Posicionamiento
+2.Modelo de caja
+3.Tipografia
+4.Temas visuales (shadows border radius)
+5.Otros */
+
+:root {
+    --linear: #F6FAFD;
+    --white: #FFFFFF;
+    --purple: #9C69E2;
+    --black:  #212353;
+    --pink: #F063B8;
+    --aqua: #68C9BA;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* 78% */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--linear);
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 9% 61% 30%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo nav button";
+    width: 78%;
+    height: 6rem;
+    margin: 0 auto;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 2rem;
+}
+
+.logo--img {
+    height: 1.5rem;
+    width: 2rem;
+}
+
+.links {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.links--item {
+    font-size: 1rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.buttonContainer{
+    grid-area: button;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.button {
+    width: 6rem;
+    height: 3rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: var(--white);
+    box-shadow: 0 .4rem .4rem rgba(0,0,0,0.25);
+}
+
+.intro {
+    width: 78%;
+    height: 15rem;
+    margin: 0 auto;
+    background-image: url('https://seppflores.github.io/Artifacts/img/imgHeader.png');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: bottom right;
+}
+
+.cardHeader {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 45% 37% 18%;
+    row-gap: 0.5rem;
+    grid-template-areas: "title" "paragraph" "button2";
+    width: 50%;
+}
+
+.cardHeader--title {
+    grid-area: title;
+    font-size: 1.6rem;
+}
+
+.cardHeader--text {
+    grid-area: paragraph;
+    font-size: 0.8rem;
+}
+
+.cardHeader--button {
+    grid-area: button2;
+    width: 7rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: var(--purple);
+}
+
+.white {
+    color: var(--white);
+}
+
